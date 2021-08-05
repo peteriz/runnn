@@ -1,6 +1,7 @@
 import argparse
 from typing import Dict, List
-from utils import read_yaml, run_command
+
+from runnn.utils import read_yaml, run_command
 
 APP_KEY = "app"
 APP_CMD_PREFIX = "cmd_prefix"
@@ -103,7 +104,7 @@ def main() -> None:
     args = parse_args()
     args_dict = read_yaml(args.arguments_file)
     cmd = create_command(args.program, args_dict)
-    
+
     if args.print:
         print(cmd.get_cmd_string())
     else:

@@ -1,0 +1,26 @@
+app:
+  cmd_prefix: python  # appending cmd to python script
+  positional: first_arg second_arg
+
+arguments_group1:
+  param1: 1
+  param2: 2
+  x: 37
+
+arguments_group2:
+  param3: param_num_3
+  another_one: true
+  one_more: [1,2,3]
+  string_arg: 'this is a sentence'
+
+# hyperparameters:
+#   arg1: [1,2,3]
+#   arg2: [a,b,c]
+#   arg3:
+#     type: float
+#     min: 0.0
+#     max: 1.0
+#   arg4:
+#     type: int
+#     min: 0
+#     max: 100
