@@ -80,7 +80,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "arguments_file", type=str, help="Arguments yaml file to use to generate the command"
     )
-    parser.add_argument("--print", action="store_true", help="Print the command instead of running")
+    parser.add_argument("--run", action="store_true", help="Run the command instead of printing")
     return parser.parse_args()
 
 
@@ -105,10 +105,10 @@ def main() -> None:
     args_dict = read_yaml(args.arguments_file)
     cmd = create_command(args.program, args_dict)
 
-    if args.print:
-        print(cmd.get_cmd_string())
-    else:
+    if args.run:
         cmd.run_cmd()
+    else:
+        print(cmd.get_cmd_string())
 
 
 if __name__ == "__main__":
