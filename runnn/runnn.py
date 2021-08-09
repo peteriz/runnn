@@ -10,7 +10,7 @@ HP_PARAMS_KEY = "hyperparameters"
 
 
 class CmdAndArgs:
-    def __init__(self, program: str, args: Dict, cmd_prefix=None, positional_args=None):
+    def __init__(self, program: str, args: Dict, cmd_prefix: str=None, positional_args: str=None):
         self.program = program
         self._args = args
         self._cmd_prefix = cmd_prefix
