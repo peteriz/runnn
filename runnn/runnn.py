@@ -9,7 +9,7 @@ APP_POSITIONAL = "positional"
 HP_PARAMS_KEY = "hyperparameters"
 
 
-class CmdAndArgs:
+class CmdWithArgs:
     def __init__(self, program: str, args: Dict, cmd_prefix: str=None, positional_args: str=None):
         self.program = program
         self._args = args
@@ -84,7 +84,7 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def create_command(program: str, param_dict: Dict) -> CmdAndArgs:
+def create_command(program: str, param_dict: Dict) -> CmdWithArgs:
     cmd_prefix = None
     if APP_KEY in param_dict:
         app_dict = param_dict.get(APP_KEY)
@@ -96,7 +96,7 @@ def create_command(program: str, param_dict: Dict) -> CmdAndArgs:
     for key in prog_arg_keys:
         key_dict = param_dict.get(key)
         prog_args.update({kd: kv for kd, kv in key_dict.items()})
-    new_command = CmdAndArgs(program, prog_args, cmd_prefix, positional_args)
+    new_command = CmdWithArgs(program, prog_args, cmd_prefix, positional_args)
     return new_command
 
 
