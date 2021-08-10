@@ -1,6 +1,6 @@
 # RUNNN
 
-A handy tool for launching python scripts with large amounts of arguments using a more readable yaml file.
+A utility for executing applications with large amounts of arguments from a semantically organized YAML file.
 
 ## Install
 
