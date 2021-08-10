@@ -30,7 +30,7 @@ runnn script.py arg.yaml
 runnn script.py arg.yaml --print
 ```
 
-## Argument definition
+## Argument definition in yaml file
 
 ```yaml
 app:
