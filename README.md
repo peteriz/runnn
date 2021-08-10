@@ -10,6 +10,12 @@ cd runnn
 pip install .
 ```
 
+or 
+
+```bash
+pip install git+https://github.com/peteriz/runnn.git
+```
+
 ## Usage
 
 ### Just run
@@ -54,16 +60,16 @@ arguments_group2:
   param6: [1,2,3]
 ```
 
-## Features
+## Upcoming Features
 
-- define yaml syntax for features
-  - hyperparameter key for running hyperparameter search
-  - support multi-processing (running hp search in parallel)
+- [ ] Define hyperparameter key in yaml for generating a list of commands for hyperparameter search
+- [ ] Add support for multi-processing hyperparameter runs in parallel with progress bar
 
-- runnn.py arguments:
-  [ ] run
-  [ ] generate run command and print
-  [ ] if hyperparameter exist will run or print all commands
-  [ ] hyperparameter support: lists of argument, range as float/int, count (number of random draws)
+- `runnn.py` arguments:
 
-- create setup.py with `runnn` command and and pip package
+  - [X] run
+  - [X] generate run command and print
+  - [ ] if hyperparameter exist will run or print all commands
+  - [ ] hyperparameter support: lists of argument, range as float/int, count (number of random draws)
+
+- [X] Create setup.py with `runnn` command and and pip package
