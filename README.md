@@ -37,7 +37,7 @@ app:
   # prefix to amend
   cmd_prefix: python
   # add positional arguments
-  positional: first_arg second_arg
+  positional: pos_arg1 pos_arg2
 
 # first argument group
 arguments_group1:
@@ -53,11 +53,18 @@ arguments_group2:
   # string argument
   param3: param_num_3
   # long string argument
-  param4: 'this is a sentence'
+  param4: 'this is a long string'
   # bool argument
   param5: true
   # list argument
   param6: [1,2,3]
+```
+
+running the above yaml with `runnn` and a sample script will result in the following command:
+
+```
+python script.py pos_arg1 pos_arg2 --param1=1 --param2=2.71 -x=37 \
+    --param3=param_num_3 --param4="this is a long string" --param5=True --param6=[1,2,3]
 ```
 
 ## Upcoming Features
